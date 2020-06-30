@@ -1,0 +1,70 @@
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 1s;
+
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  > div {
+    background: linear-gradient(#fff, #999);
+    color: black;
+    width: 60%;
+    height: 30%;
+    padding: 0.75em;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > h2 {
+      padding: 0.5em;
+    }
+  }
+
+  &__resize-button {
+    background: gray;
+    color: white;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+    align-self: flex-end;
+    line-height: 1.7em;
+    padding: 0 1.5em;
+    border-radius: 0.6em;
+  }
+}
+
+.close {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  width: 24px;
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px #000;
+
+  &:hover {
+    background: #00d9ff;
+  }
+}

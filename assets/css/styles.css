@@ -43,7 +43,6 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  align-items: center;
   padding: 0.5em;
   margin: 0 0.2em;
   border-radius: 0.5em;
@@ -52,11 +51,14 @@ header {
     display: flex;
     width: 25%;
     justify-content: space-evenly; }
-  .options-container__resize-btn, .options-container__mode-btn, .options-container__reset-btn {
+  .options-container__resize-btn a, .options-container__mode-btn, .options-container__reset-btn {
     background: gray;
     padding: 0.5em;
     margin-left: 0.3em;
     border-radius: 0.7em; }
+  .options-container__resize-btn a {
+    color: white;
+    text-decoration: none; }
 
 .white,
 .black,
@@ -74,6 +76,61 @@ header {
 
 .multicolor {
   background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); }
+
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 1s;
+  pointer-events: none; }
+  .modal-dialog:target {
+    opacity: 1;
+    pointer-events: auto; }
+  .modal-dialog > div {
+    background: linear-gradient(#fff, #999);
+    color: black;
+    width: 60%;
+    height: 30%;
+    padding: 0.75em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .modal-dialog > div > h2 {
+      padding: 0.5em; }
+  .modal-dialog__resize-button {
+    background: gray;
+    color: white;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+    align-self: flex-end;
+    line-height: 1.7em;
+    padding: 0 1.5em;
+    border-radius: 0.6em; }
+
+.close {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  width: 24px;
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px #000; }
+  .close:hover {
+    background: #00d9ff; }
 
 .sketch-container {
   background: rgba(230, 230, 230, 0.2);
