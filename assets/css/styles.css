@@ -20,9 +20,6 @@
   grid-template-rows: 0.7fr 6fr;
   row-gap: 0.5em; }
 
-.sketch-container {
-  background: teal; }
-
 header {
   width: 100%; }
 
@@ -71,3 +68,14 @@ header {
 
 .multicolor {
   background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); }
+
+.sketch-container {
+  background: #e6e6e6;
+  margin: 0.5em 0.3em 0;
+  padding: 0.5em;
+  display: flex; }
+  .sketch-container__sketch {
+    background: white;
+    margin: auto;
+    width: 90%;
+    height: 90%; }

@@ -1,0 +1,13 @@
+.sketch-container {
+  background: hsl(0, 0, 90);
+  margin: 0.5em 0.3em 0;
+  padding: 0.5em;
+  display: flex;
+
+  &__sketch {
+    background: hsl(0, 0, 100);
+    margin: auto;
+    width: 90%;
+    height: 90%;
+  }
+}
