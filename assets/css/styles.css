@@ -79,3 +79,18 @@ header {
     margin: auto;
     width: 90%;
     height: 90%; }
+
+footer {
+  background: #999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.3em;
+  padding: 0.3em;
+  border-radius: 0.5em; }
+  footer > p {
+    padding: 0.4em; }
+  footer > img {
+    width: 30px;
+    border-radius: 50%;
+    padding: 0.3em; }
