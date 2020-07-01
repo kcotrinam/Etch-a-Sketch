@@ -14,9 +14,9 @@
       <main class="body-container">
         <div class="options-container">
           <div class="options-container__color">
-            <div class="white"></div>
-            <div class="black"></div>
-            <div class="multicolor"></div>
+            <div class="white color-opt" id="white"></div>
+            <div class="black color-opt" id="black"></div>
+            <div class="multicolor color-opt" id="orange"></div>
           </div>
           <div class="options-container__resize-btn" id="resize-btn">
             <a href="#open-modal">Resize</a>
@@ -26,7 +26,9 @@
               <a href="#close" class="close" id="close">X</a>
               <h2>Enter new size</h2>
               <input type="text" />
-              <div class="modal-dialog__resize-button">Resize</div>
+              <div class="modal-dialog__resize-button" id="resizer-btn">
+                Resize
+              </div>
             </div>
           </div>
           <div class="options-container__mode-btn" id="mode-btn">
@@ -37,7 +39,7 @@
           </div>
         </div>
         <div class="sketch-container">
-          <div class="sketch-container__sketch"></div>
+          <div class="sketch-container__sketch" id="sketch"></div>
         </div>
       </main>
       <footer class="footer">

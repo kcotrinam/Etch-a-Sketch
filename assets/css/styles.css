@@ -132,6 +132,9 @@ header {
   .close:hover {
     background: #00d9ff; }
 
+:root {
+  --sketch-size: 16; }
+
 .sketch-container {
   background: rgba(230, 230, 230, 0.2);
   margin: 0.5em 0.3em 0;
@@ -141,7 +144,13 @@ header {
     background: white;
     margin: auto;
     width: 90%;
-    height: 90%; }
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(var(--sketch-size), 1fr);
+    grid-template-rows: repeat(var(--sketch-size), 1fr); }
+
+.sketch-item {
+  border: 1px solid #d9d9d9; }
 
 footer {
   background: #999999;

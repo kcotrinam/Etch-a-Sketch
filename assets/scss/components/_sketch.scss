@@ -1,3 +1,7 @@
+:root {
+  --sketch-size: 16;
+}
+
 .sketch-container {
   background: hsla(0, 0, 90, 0.2);
   margin: 0.5em 0.3em 0;
@@ -9,5 +13,13 @@
     margin: auto;
     width: 90%;
     height: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(var(--sketch-size), 1fr);
+    grid-template-rows: repeat(var(--sketch-size), 1fr);
   }
+}
+
+.sketch-item {
+  border: 1px solid hsl(0, 0, 85);
 }
