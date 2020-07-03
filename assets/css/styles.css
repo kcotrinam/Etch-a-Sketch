@@ -18,7 +18,7 @@ body {
 
 .header {
   width: 100%;
-  height: 100%; }
+  height: 20%; }
 
 .body-container {
   display: grid;
@@ -30,8 +30,8 @@ header {
 
 .header {
   background-color: #e6e6e6;
-  width: 80vw;
-  margin-top: -35px;
+  width: 50vw;
+  margin-top: -40px;
   margin-left: auto;
   margin-right: auto;
   padding: 1.2em 0.5em 0.5em 0.5em;
@@ -48,25 +48,46 @@ header {
   border-radius: 0.5em;
   color: white; }
   .options-container__color {
-    display: flex;
-    width: 25%;
-    justify-content: space-evenly; }
-  .options-container__resize-btn a, .options-container__mode-btn, .options-container__reset-btn {
+    display: inline-block;
+    width: 30%; }
+  .options-container__resize-btn, .options-container__mode-btn, .options-container__reset-btn {
     background: gray;
     padding: 0.5em;
     margin-left: 0.3em;
-    border-radius: 0.7em; }
-  .options-container__resize-btn a {
-    color: white;
-    text-decoration: none; }
+    border-radius: 0.4em;
+    line-height: 0.75em;
+    cursor: pointer; }
+    @media screen and (min-width: 640px) {
+      .options-container__resize-btn, .options-container__mode-btn, .options-container__reset-btn {
+        font-size: 1.2rem; } }
+    @media screen and (min-width: 1024px) {
+      .options-container__resize-btn, .options-container__mode-btn, .options-container__reset-btn {
+        font-size: 1.3rem; } }
 
 .white,
 .black,
 .multicolor {
+  display: inline-block;
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  margin-left: 0.2em;
   padding: 0.3em; }
+  @media screen and (min-width: 640px) {
+    .white,
+    .black,
+    .multicolor {
+      width: 20px;
+      height: 20px;
+      margin-left: 0.75em;
+      padding: 0.5em; } }
+  @media screen and (min-width: 768px) {
+    .white,
+    .black,
+    .multicolor {
+      width: 25px;
+      height: 25px;
+      margin: 0.5em; } }
 
 .white {
   background-color: white; }
@@ -79,7 +100,7 @@ header {
 
 .modal-dialog {
   position: fixed;
-  top: 0;
+  top: -100vh;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -87,12 +108,7 @@ header {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transition: all 1s;
-  pointer-events: none; }
-  .modal-dialog:target {
-    opacity: 1;
-    pointer-events: auto; }
+  transition: all 1s; }
   .modal-dialog > div {
     background: linear-gradient(#fff, #999);
     color: black;
@@ -114,7 +130,8 @@ header {
     align-self: flex-end;
     line-height: 1.7em;
     padding: 0 1.5em;
-    border-radius: 0.6em; }
+    border-radius: 0.6em;
+    cursor: pointer; }
 
 .close {
   position: absolute;
@@ -137,17 +154,22 @@ header {
 
 .sketch-container {
   background: rgba(230, 230, 230, 0.2);
-  margin: 0.5em 0.3em 0;
+  margin: 0.5em auto 0;
   padding: 0.5em;
+  width: 80vw;
   display: flex; }
   .sketch-container__sketch {
     background: white;
     margin: auto;
-    width: 90%;
-    height: 90%;
+    width: 500px;
+    height: 350px;
     display: grid;
     grid-template-columns: repeat(var(--sketch-size), 1fr);
     grid-template-rows: repeat(var(--sketch-size), 1fr); }
+    @media screen and (min-width: 640px) {
+      .sketch-container__sketch {
+        width: 750px;
+        height: 500px; } }
 
 .sketch-item {
   border: 1px solid #d9d9d9; }
@@ -161,8 +183,20 @@ footer {
   padding: 0.3em;
   border-radius: 0.5em; }
   footer > p {
-    padding: 0.4em; }
+    padding: 0.2em; }
+    @media screen and (min-width: 640px) {
+      footer > p {
+        font-size: 0.75rem; } }
+    @media screen and (min-width: 768px) {
+      footer > p {
+        color: wheat; } }
+    @media screen and (min-width: 1024px) {
+      footer > p {
+        color: wheat; } }
   footer > img {
     width: 30px;
     border-radius: 50%;
     padding: 0.3em; }
+    @media screen and (min-width: 640px) {
+      footer > img {
+        width: 30px; } }

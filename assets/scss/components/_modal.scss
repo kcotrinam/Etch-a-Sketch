@@ -1,6 +1,6 @@
 .modal-dialog {
   position: fixed;
-  top: 0;
+  top: -100vh;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -10,15 +10,8 @@
   justify-content: center;
 
   background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
+
   transition: all 1s;
-
-  pointer-events: none;
-
-  &:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
 
   > div {
     background: linear-gradient(#fff, #999);
@@ -47,6 +40,7 @@
     line-height: 1.7em;
     padding: 0 1.5em;
     border-radius: 0.6em;
+    cursor: pointer;
   }
 }
 

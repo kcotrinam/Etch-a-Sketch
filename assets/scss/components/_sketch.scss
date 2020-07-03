@@ -4,19 +4,25 @@
 
 .sketch-container {
   background: hsla(0, 0, 90, 0.2);
-  margin: 0.5em 0.3em 0;
+  margin: 0.5em auto 0;
   padding: 0.5em;
+  width: 80vw;
   display: flex;
 
   &__sketch {
     background: hsl(0, 0, 100);
     margin: auto;
-    width: 90%;
-    height: 90%;
+    width: 500px;
+    height: 350px;
 
     display: grid;
     grid-template-columns: repeat(var(--sketch-size), 1fr);
     grid-template-rows: repeat(var(--sketch-size), 1fr);
+
+    @include mq(medium) {
+      width: 750px;
+      height: 500px;
+    }
   }
 }
 

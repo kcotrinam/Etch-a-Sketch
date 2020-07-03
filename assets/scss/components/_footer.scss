@@ -9,12 +9,28 @@ footer {
   border-radius: 0.5em;
 
   > p {
-    padding: 0.4em;
+    padding: 0.2em;
+
+    @include mq(medium) {
+      font-size: 0.75rem;
+    }
+
+    @include mq(768px) {
+      color: wheat;
+    }
+
+    @include mq(large) {
+      color: wheat;
+    }
   }
 
   > img {
     width: 30px;
     border-radius: 50%;
     padding: 0.3em;
+
+    @include mq(medium) {
+      width: 30px;
+    }
   }
 }

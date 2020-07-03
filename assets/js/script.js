@@ -1,6 +1,10 @@
 const sketchContainer = document.querySelector('#sketch');
 const resizerBtn = document.querySelector('#resizer-btn');
-const newSketchSize = document.querySelector('input');
+const newSketchSizeBox = document.querySelector('input');
+const modalDialog = document.querySelector('.modal-dialog');
+const openModal = document.querySelector('#resize-btn');
+const resetBtn = document.querySelector('#reset-btn');
+const dragModeBtn = document.querySelector('#drag-btn');
 
 let sketchSize = 16;
 let brushColor = 'gray';
@@ -59,10 +63,21 @@ const getColor = () => {
 
 getColor();
 
-const reSetSketch = () => {
-  sketchSize = newSketchSize.value * 1;
+resizerBtn.addEventListener('click', () => {
+  sketchSize = newSketchSizeBox.value * 1;
+  showSketch(sketchSize);
+  modalDialog.style.top = '-100vh';
+  newSketchSizeBox.value = '';
+  drawSketch();
+});
+
+const resetSketch = () => {
   showSketch(sketchSize);
   drawSketch();
 };
 
-resizerBtn.addEventListener('click', reSetSketch);
+resetBtn.addEventListener('click', resetSketch);
+
+openModal.addEventListener('click', () => {
+  modalDialog.style.top = '0';
+});
