@@ -67,7 +67,7 @@ header {
     cursor: pointer; }
     @media screen and (min-width: 1024px) {
       .options-container__resize-btn, .options-container__mode-btn, .options-container__reset-btn {
-        font-size: 1.2rem; } }
+        font-size: 1.3rem; } }
 
 .white,
 .black,
