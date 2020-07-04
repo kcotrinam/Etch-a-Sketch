@@ -4,12 +4,15 @@ header {
 
 .header {
   background-color: hsl(0, 0, 90);
-  width: 50vw;
-  margin-top: -40px;
+  width: 80vw;
+  margin-top: -10px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.2em 0.5em 0.5em 0.5em;
+  padding: 0.3em 0.5em 0em 0.5em;
 
-  text-align: center;
   border-radius: 0.75em;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }

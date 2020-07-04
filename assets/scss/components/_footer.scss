@@ -1,27 +1,21 @@
 footer {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+footer div {
   background: hsl(0, 0, 60);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  margin: 0.2em 0.3em;
+  width: 60vw;
+  margin: 0.2em auto;
   padding: 0.3em;
   border-radius: 0.5em;
 
   > p {
     padding: 0.2em;
-
-    @include mq(medium) {
-      font-size: 0.75rem;
-    }
-
-    @include mq(768px) {
-      color: wheat;
-    }
-
-    @include mq(large) {
-      color: wheat;
-    }
   }
 
   > img {
