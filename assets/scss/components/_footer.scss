@@ -1,6 +1,7 @@
 footer {
   width: 100%;
   margin-top: 0.5em;
+  padding: 0.7em 0;
 }
 
 footer div {
@@ -11,20 +12,25 @@ footer div {
 
   width: 60vw;
   margin: 0.2em auto;
-  padding: 0.3em;
+  padding: 0.5em;
   border-radius: 0.5em;
 
   > p {
     padding: 0.2em;
+
+    @include mq(medium) {
+      font-size: 1.2em;
+    }
   }
 
   > img {
     width: 30px;
     border-radius: 50%;
     padding: 0.3em;
+    cursor: pointer;
 
     @include mq(medium) {
-      width: 30px;
+      width: 50px;
     }
   }
 }

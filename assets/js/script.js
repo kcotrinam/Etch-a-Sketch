@@ -5,6 +5,7 @@ const modalDialog = document.querySelector('.modal-dialog');
 const openModal = document.querySelector('#resize-btn');
 const resetBtn = document.querySelector('#reset-btn');
 const dragModeBtn = document.querySelector('#drag-btn');
+const githubLink = document.querySelector('#git-image');
 
 let sketchSize = 16;
 let brushColor = 'gray';
@@ -81,3 +82,8 @@ resetBtn.addEventListener('click', resetSketch);
 openModal.addEventListener('click', () => {
   modalDialog.style.top = '0';
 });
+
+const openGitSite = () => {
+  window.open('https://github.com/kcotrinam92');
+};
+githubLink.addEventListener('click', openGitSite);
